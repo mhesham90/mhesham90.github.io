@@ -228,7 +228,6 @@ steps
 }
 .title2,.title3 { opacity: 0;}
 #title h1 .title1 {
-    text-transform: lowercase;
     display: inline-block;
     font-weight: normal;
     font-size: 0.5em;
@@ -258,6 +257,7 @@ steps
     font-weight: normal;
     line-height: 1.5;
     opacity: 0;
+    font-size: 1.5em;
     /*transition: opacity 1s;*/
 }
 
@@ -302,11 +302,7 @@ h1 {
     line-height: 1;
 }
 
-h2 {
-    font-weight: bold;
-    font-size: 1.5em;
-    line-height: 1;
-}
+
 
 #firstImpression{
         background: radial-gradient(cornflowerblue, transparent,transparent);
@@ -315,6 +311,17 @@ h2 {
 #ux h1>span{
     font-size: 1.2em;
     color: red;
+}
+
+.graph img{
+    max-height: 600px;
+    max-width: 600px;
+}
+
+.step.graph{
+    width: 800px;
+    height: 800px;
+    background-color: white;
 }
 
 /*
