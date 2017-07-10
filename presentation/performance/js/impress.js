@@ -254,6 +254,11 @@
         
         current = target;
         active = el;
+
+        if(el.id == "end"){
+            var event = new Event('endStep');
+            document.dispatchEvent(event);
+        }
         
         return el;
     }
@@ -284,6 +289,31 @@
             
             event.preventDefault();
         }
+    }, false);
+
+    var isScrolling=false;
+    document.addEventListener("wheel", function ( e ) {
+        
+        if (!isScrolling){
+            isScrolling=true;
+            var next = active;
+            if ( e.deltaY < 0 ) {
+                next = steps.indexOf( active ) - 1;
+                next = next >= 0 ? steps[ next ] : steps[ steps.length-1 ];
+            }else{
+                
+                next = steps.indexOf( active ) + 1;
+                next = next < steps.length ? steps[ next ] : steps[ 0 ];
+                
+            }
+            select(next);        
+            e.preventDefault();
+            setTimeout(function() {
+                isScrolling = false;
+            }, 1000);
+
+        }
+
     }, false);
 
     document.addEventListener("click", function ( event ) {

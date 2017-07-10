@@ -200,12 +200,240 @@
             <h2>Can I optimize my website ?</h2>
         </div>
 
+<!--============http2============-->
+        <div id="http2" class="step" data-x="600" data-y="450" data-scale="0.1">
+            <h1>HTTP/2</h1>
+            <ul>
+                <li>Developed from SPDY protocol, originally developed by Google.</li>
+                <li>IESG approved it to publish as Proposed Standard on February 17, 2015.</li>
+                <li>Most major browsers added HTTP/2 support by the end of 2015.</li>
+            </ul>
+        </div>
+
+        <div id="binary" class="step" data-x="600" data-y="490" data-z="-40" data-rotate-x="-90" data-scale="0.1">
+            <h1>Binary</h1><br/>
+            <div class="row vertical-align">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Although it will probably take more efforts to read binary as compared text commands, it is easier for the network to generate and parse frames available in binary.</p>
+            </div><br/>      
+            <div class="row">
+                <div class="col-lg-offset-3 text-center">
+                    <img class="img-responsive" src="img/binary.png">
+                </div>
+            </div>
+        </div>
+
+        <div id="multiplex" class="step" data-x="600" data-y="490" data-z="-120" data-rotate-x="-90" data-scale="0.1">
+            <h1>Fully Multiplexed</h1><br/>
+            <div class="row vertical-align">
+                <p>Send multiple requests for data in parallel over a single TCP.</p>
+            </div><br/>      
+            <div class="row">
+                <div class="col-lg-offset-4 text-center">
+                    <img class="img-responsive" src="img/multiplexing.gif">
+                </div>
+            </div>
+        </div>
+
+        <div id="serverPush" class="step" data-x="600" data-y="490" data-z="-200" data-rotate-x="-90" data-scale="0.1">
+            <h1>Server Push</h1><br/>
+            <div class="row vertical-align">
+                <p>Send additional cacheable information to the client that isn’t requested but is anticipated in future requests.</p>
+            </div><br/>      
+            <div class="row">
+                <div class="col-lg-offset-2 text-center">
+                    <img class="img-responsive" src="img/http2_push.png">
+                </div>
+            </div>
+        </div>
+
+        <div id="HPACK" class="step" data-x="600" data-y="490" data-z="-280" data-rotate-x="-90" data-scale="0.1">
+            <h1>HPACK</h1><br/>
+            <div class="row vertical-align">
+                <p>HPACK compresses the individual value of each header before it is transferred to the server, which then looks up the encoded information in list of previously transferred header values to reconstruct the full header information.</p>
+            </div><br/>      
+            <div class="row">
+                <div class="col-lg-offset-2 text-center">
+                    <img class="img-responsive" src="img/hpack.png" style="max-height:200px;">
+                </div>
+            </div>
+        </div>
+
+        <div id="usehttp2" class="step" data-x="600" data-y="490" data-z="-360" data-rotate-x="-90" data-scale="0.1">
+            <h1>Start using it</h1><br/>
+            <div class="row vertical-align">
+                <code class="snippet">
+                    $ sudo add-apt-repository ppa:ondrej/apache2
+                    <br/>$ sudo apt-get upgrade apache2
+                    <br/>$ sudo a2enmod http2
+                </code>
+            </div>
+            <div class="row vertical-align">
+                Open .conf file for your virtual host.<br/>Add this line somewhere in the VirtualHost section: 
+            </div>
+            <div class="row vertical-align">
+                <code>Protocols h2 http/1.1</code><br/>
+            </div>
+            <div class="row vertical-align">
+                <br/><p>then:</p>
+            </div>
+            <div class="row vertical-align">
+                <br/><code>$ service apache2 restart</code>
+            </div><br/>      
+        </div>
+
+        
+
+<!--============image opt============-->
+
+        <div id="imgopt" class="step" data-x="500" data-y="500" data-scale="0.1">
+            <h1>Image Optimization</h1>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp; Images often account for most of the downloaded bytes on a web page and also often occupy a significant amount of visual space.
+            </p>
+            <ul>
+                <li>Eliminate unnecessary image resources.</li>
+                <li>CSS3 effects where possible.</li>
+                <li>Use web fonts instead of images.</li>
+                <li>Scalable Vector Graphics (SVG), minify, compress.</li>
+                <li>Content Delivery Network (CDN).</li>
+            </ul>
+        </div>
+
+<!--============Minify============-->
+
+        <div id="Minify" class="step" data-x="400" data-y="550" data-scale="0.1">
+            <h1>Minify CSS and Javascript</h1>
+            <br/>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Minification of resources means removing unnecessary characters from your HTML, Javascript, and CSS that are not required to load, such as:</p>
+            <br/>
+            <ul>
+                <li>White space characters.</li>
+                <li>New line characters.</li>
+                <li>Comments.</li>
+                <li>Block delimiters.</li>
+            </ul>
+        </div>
+
+<!--============Render Blocking Resources============-->
+
+        <div id="renderblock" class="step" data-x="600" data-y="550" data-scale="0.1">
+            <h1>Render Blocking Resources</h1>
+            <br/>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1>CSS</h1><br/>
+                    <ul>
+                        <li>Properly call your CSS files.</li>
+                        <li>concatenate your CSS files into one file.</li>
+                        <li>Use less CSS overall.</li>
+                    </ul>
+                </div>
+                <div class="Col-lg-6">
+                    <h1>JS</h1><br/>
+                    <ul>
+                        <li>Before your <code>&lt;body/&gt;</code> tag.</li>
+                        <li>Use the async or defer directive.</li>
+                        <li>Inline your javascript if it is small.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+<!--============CDN============-->
+
+        <div id="CDN" class="step" data-x="500" data-y="600" data-scale="0.1">
+            <h1>Content Delivery Network</h1>
+            <br/>
+            <div class="row">
+                <div class="text-center">
+                    <img class="img-responsive" src="img/cdn.png">
+                </div>
+            </div>
+        </div>
+
+<!--============TTFB============-->
+
+        <div id="TTFB" class="step" data-x="400" data-y="650" data-scale="0.1">
+            <h1>(TTFB) Time To First Byte</h1>
+            <br/>
+            <div class="row">
+                <div class="text-center">
+                    <img class="img-responsive" src="img/ttfb.png">
+                </div>
+            </div>
+        </div>
+
+<!--============caching============-->
+
+        <div id="caching" class="step" data-x="610" data-y="650" data-scale="0.1">
+            <h1>Caching</h1>
+            <br/>
+            <div class="row">
+                <div class="text-center col-lg-offset-2">
+                    <img class="img-responsive" src="img/empty.gif">
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-center col-lg-offset-2">
+                    <img class="img-responsive" src="img/full.gif">
+                </div>
+            </div>
+        </div>
+        <div id="apachecache" class="step" data-x="610" data-y="750" data-z="-40" data-scale="0.1">
+            <br/><br/><br/><br/><br/>
+            <h1>Apache Example</h1>
+            <div class="row">
+                <code class="snippet">
+                    $ sudo a2enmod expires
+                    <br/>$ sudo a2enmod headers
+                </code>
+                <p>in .htaccess</p>
+                <code class="snippet">
+                    &lt;IfModule mod_expires.c&gt;
+                    <br/>&nbsp;&nbsp;    ExpiresActive on
+                    <br/># Your document html
+                    <br/>&nbsp;&nbsp;    ExpiresByType text/html "access plus 0 seconds"
+                    <br/># Media: images, video, audio
+                    <br/>&nbsp;&nbsp;    ExpiresByType audio/ogg "access plus 1 month"
+                    <br/>&nbsp;&nbsp;    ExpiresByType image/gif "access plus 1 month"
+                    <br/>&nbsp;&nbsp;    ExpiresByType image/jpeg "access plus 1 month"
+                    <br/>&nbsp;&nbsp;    ExpiresByType image/png "access plus 1 month"
+                    <br/>&nbsp;&nbsp;    ExpiresByType video/mp4 "access plus 1 month"
+                    <br/>&nbsp;&nbsp;    ExpiresByType video/ogg "access plus 1 month"
+                    <br/>&nbsp;&nbsp;    ExpiresByType video/webm "access plus 1 month"
+                    <br/># CSS and JavaScript
+                    <br/>&nbsp;&nbsp;    ExpiresByType application/javascript "access plus 1 year"
+                    <br/>&nbsp;&nbsp;    ExpiresByType text/css "access plus 1 year"
+                    <br/>&lt;/IfModule&gt;
+                </code>
+            </div>
+        </div>
+        <div id="apachecache2" class="step" data-x="610" data-y="770" data-z="-40" data-scale="0.1">
+        </div>
+
+<!--============Thanks============-->
+
+        <div id="thanks" class="step" data-x="-500" data-y="1000" data-scale="0.1">
+            <h1>Thank you</h1>
+            <br/>
+            <div class="row">
+                <div class="text-center">
+                    <p>All the slides and demos will be available at<br/><a href="https://github.com/mhesham90/mhesham90.github.io">https://github.com/mhesham90/</a></p>
+                    <p>Presentation created with impress.js <br/><a href="https://github.com/impress/impress.js">https://github.com/impress/impress.js</a></p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
 <!--====================overview====================-->
 
-        <div id="end" class="step" data-x="0" data-y="500" data-rotate="0" data-scale="3">
+        <div id="end" class="step" data-x="0" data-y="500" data-rotate="720" data-scale="3">
             <span class="author">
-                <a href="https://github.com/mhesham90"><img src="img/Octocat.png" style="width: 80px;"></a>
-                <a href="https://linkedin.com/in/mhesham90"><img src="img/linkedin.png" style="width: 80px;"></a>
+                <a id="github" href="https://github.com/mhesham90"><img src="img/Octocat.png" style="width: 80px;"></a>
+                <a id="linkedin" href="https://linkedin.com/in/mhesham90"><img src="img/linkedin.png" style="width: 80px;"></a>
             </span>
         </div>
 
@@ -222,6 +450,10 @@
                 $(".title2").delay(1500).fadeTo(2000,1);
                 $(".title3").delay(2000).fadeTo(2000,1);
                 $(".author").delay(2500).fadeTo(1000,1);
+            });
+            $(document).on("endStep",function(){
+                $("#github").delay(500).fadeTo(2000,1);
+                $("#linkedin").delay(1500).fadeTo(2000,1);
             });
     </script>
 

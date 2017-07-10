@@ -115,8 +115,8 @@ code.snippet .comment { font-size: 0.8em; color: #777; }
 
 .step ul li:before {
     content: "★";
-    text-shadow: 0 0 5px rgba(50,50,50,0.7);
-    color: transparent;
+    text-shadow: 1px 1px 5px darkorange;
+    color: goldenrod;
     margin-right: 0.5em;
 }
 
@@ -329,10 +329,14 @@ h1 {
 */
 
 
+#renderblock li{
+    font-size: .7em
+}
 
 
-
-
+#apachecache code{
+    font-size: .7em
+}
 
 
 
@@ -360,6 +364,16 @@ h1 {
     background: none;
     text-shadow: none;
     border-radius: 0.2em;
-    
+    opacity: 0;
     transition: 0.5s;
 }
+/*#end.active a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0 0.1em;
+    background: none;
+    text-shadow: none;
+    border-radius: 0.2em;
+    opacity: 1;
+    transition: opacity 5s ease-in-out;
+}*/
