@@ -211,7 +211,7 @@
   };
   
   const rootElement = document.getElementById( "impress" );
-  rootElement.addEventListener( "impress:stepleave", function(event) {
+  rootElement.addEventListener( "impress:stepleave", (event) => {
     const currentStep = event.target;
     const nextStep = event.detail.next;
     if(nextStep.id === 'overview'){
