@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Web Workers| by mohamed hesham @mhesham90</title>
+  <meta name="description" content="Web Workers Intro" />
+  <meta name="author" content="Mohamed esam" />
+  <link href="css/index.css" rel="stylesheet" />
+</head>
+
+<body class="impress-not-supported">
+<div class="fallback-message">
+  <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+  <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress" data-transition-duration="2000">
+
+  <div id="title" class="step" data-x="0" data-y="0" data-z="0" data-scale="8">
+    <br>
+    <br>
+    <h1>
+      Web Workers
+    </h1>
+  </div>
+  <div id="title-big" class="step" data-x="0" data-y="0" data-z="0" data-scale="8">
+    <span class="author">
+        <i>by</i><br/>
+        <a href="https://github.com/mhesham90"><span class="name">Mohamed Hesham</span></a>
+    </span>
+  </div>
+
+  <div id="step-1" class="step" data-x="-5000" data-y="-2000" data-z="-1000" data-rotate-y="0">
+    <h2>Threads</h2>
+    <p>A <b>thread</b> is sequence of programmed instructions </p>
+    <img src="./img/threding.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%;" alt="">
+  </div>
+
+  <div id="step-2" class="step" data-x="-4347" data-y="-1300" data-z="-1175" data-rotate-y="30">
+    <br>
+    <br>
+    <img src="./img/html5.png" style="display: block; margin-left: auto; margin-right: auto; width: 80%;" alt="">
+  </div>
+
+  <div id="step-3" class="step" data-x="-4347" data-y="-600" data-z="-1525" data-rotate-y="150">
+    <p style="display: block; margin-left: auto; margin-right: auto;">Not to be confused with</p>
+    <h2>Service Workers</h2>
+    <img src="./img/serviceworker.png" style="display: block; margin-left: auto; margin-right: auto; width: 80%;" alt="">
+  </div>
+
+  <div id="step-4" class="step" data-x="-5000" data-y="100" data-z="-1700" data-rotate-y="180">
+    <br>
+    <br>
+    <img src="./img/webworker.png" style="display: block; margin-left: auto; margin-right: auto; width: 100%;" alt="">
+  </div>
+
+  <div id="step-5" class="step" data-x="-5653" data-y="800" data-z="-1525" data-rotate-y="210">
+    <img src="./img/mainjs.png" style="display: block; margin-left: auto; margin-right: auto; width: 70%;" alt="">
+    <br>
+    <img src="./img/workerjs.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%;" alt="">  
+  </div>
+
+  <div id="step-6" class="step" data-x="-5653" data-y="1500" data-z="-1175" data-rotate-y="330">
+    <br>
+    <img src="./img/postmessage.png" style="display: block; margin-left: auto; margin-right: auto; width: 70%;" alt="">
+    <h2>Cloning and Transferable Objects</h2>
+  </div>
+
+
+  <div id="step-11" class="step" data-x="5000" data-y="-2000" data-z="-1000" data-rotate-y="360">
+    <h2>Error Handling</h2>
+    <br>
+    <img src="./img/errorhandle.png" style="display: block; margin-left: auto; margin-right: auto; width: 70%;" alt="">      
+  </div>
+
+  <div id="step-12" class="step" data-x="5653" data-y="-1300" data-z="-1175" data-rotate-y="390">
+    <h2>Debugging</h2>
+    <br>
+    <img src="./img/debug.png" style="display: block; margin-left: auto; margin-right: auto; width: 70%;" alt="">    
+  </div>
+
+  <div id="step-13" class="step" data-x="5653" data-y="-600" data-z="-1525" data-rotate-y="510">
+    <h2>Inline Workers</h2>
+    <br>
+    <img src="./img/blob.png" style="display: block; margin-left: auto; margin-right: auto; width: 100%;" alt=""> 
+  </div>
+
+  <div id="step-14" class="step" data-x="5000" data-y="100" data-z="-1700" data-rotate-y="540">
+    <h2>Modern frameworks integration ?</h2>
+    <ul>
+      <li>
+        <a href="https://github.com/GoogleChromeLabs/worker-plugin">GoogleChromeLabs / worker-plugin</a>
+      </li>
+      <li>
+        <a href="https://github.com/async-library/react-webworker">async-library / react-webworker</a>
+      </li>
+      <li>
+        <a href="https://angular.io/guide/web-worker">supported in angular 8 by default</a>
+      </li>
+    </ul>
+  </div>
+
+  <div id="step-15" class="step" data-x="4347" data-y="800" data-z="-1525" data-rotate-y="570">
+    <h2>Use Cases</h2>
+    <ul style="font-size: 20pt;">
+      <li>Prefetching and/or caching data for later use</li>
+      <li>Code syntax highlighting or other real-time text formatting</li>
+      <li>Spell checker</li>
+      <li>Analyzing video or audio data</li>
+      <li>Background I/O or polling of webservices</li>
+      <li>Processing large arrays or humungous JSON responses</li>
+      <li>Image filtering in &lt;canvas&gt;</li>
+    </ul>
+  </div>
+
+  <div id="step-16" class="step" data-x="4347" data-y="1500" data-z="-1175" data-rotate-y="690">
+    <h2>Watch Out</h2>
+    <ul style="font-size: 20pt;">
+      <li>Message size</li>
+      <li>Worker cannot access DOM</li>
+      <li>Check browser support for worker</li>
+    </ul>
+  </div>
+
+  <div id="overview" class="step overview" data-x="0" data-y="0" data-z="0" data-scale="10" data-rotate-y="0">
+    
+  </div>
+
+</div>
+
+<div id="impress-toolbar"></div>
+<div id="impress-help"></div>
+
+<script type="text/javascript" src="impress.js/extras/impress-console/js/impressConsole.js"></script>
+<script type="text/javascript">
+  var impressConsoleCss = 'impress.js/extras/impress-console/css/impressConsole.css';
+</script>
+
+
+<script type="text/javascript" src="impress.js/js/impress.js"></script>
+<script>
+  impress().init();
+  let interval;
+  function animeFunc () {
+    let step1 = document.querySelector('#step-1');
+    let step2 = document.querySelector('#step-2');
+    let step3 = document.querySelector('#step-3');
+    let step4 = document.querySelector('#step-4');
+    let step5 = document.querySelector('#step-5');
+    let step6 = document.querySelector('#step-6');
+    let x6 = step6.dataset.x;
+    let z6 = step6.dataset.z;
+    let rotateY6 = step6.dataset.rotateY;
+
+    step6.setAttribute('data-x',step5.dataset.x);
+    step6.setAttribute('data-z',step5.dataset.z);
+    step6.setAttribute('data-rotate-y',step5.dataset.rotateY);
+
+    step5.setAttribute('data-x',step4.dataset.x);
+    step5.setAttribute('data-z',step4.dataset.z);
+    step5.setAttribute('data-rotate-y',step4.dataset.rotateY);
+
+    step4.setAttribute('data-x',step3.dataset.x);
+    step4.setAttribute('data-z',step3.dataset.z);
+    step4.setAttribute('data-rotate-y',step3.dataset.rotateY);
+
+    step3.setAttribute('data-x',step2.dataset.x);
+    step3.setAttribute('data-z',step2.dataset.z);
+    step3.setAttribute('data-rotate-y',step2.dataset.rotateY);
+
+    step2.setAttribute('data-x',step1.dataset.x);
+    step2.setAttribute('data-z',step1.dataset.z);
+    step2.setAttribute('data-rotate-y',step1.dataset.rotateY);
+
+    step1.setAttribute('data-x',x6);
+    step1.setAttribute('data-z',z6);
+    step1.setAttribute('data-rotate-y',rotateY6);
+
+    let step11 = document.querySelector('#step-11');
+    let step12 = document.querySelector('#step-12');
+    let step13 = document.querySelector('#step-13');
+    let step14 = document.querySelector('#step-14');
+    let step15 = document.querySelector('#step-15');
+    let step16 = document.querySelector('#step-16');
+    let x16 = step16.dataset.x;
+    let z16 = step16.dataset.z;
+    let rotateY16 = step16.dataset.rotateY;
+
+    step16.setAttribute('data-x',step15.dataset.x);
+    step16.setAttribute('data-z',step15.dataset.z);
+    step16.setAttribute('data-rotate-y',step15.dataset.rotateY);
+
+    step15.setAttribute('data-x',step14.dataset.x);
+    step15.setAttribute('data-z',step14.dataset.z);
+    step15.setAttribute('data-rotate-y',step14.dataset.rotateY);
+
+    step14.setAttribute('data-x',step13.dataset.x);
+    step14.setAttribute('data-z',step13.dataset.z);
+    step14.setAttribute('data-rotate-y',step13.dataset.rotateY);
+
+    step13.setAttribute('data-x',step12.dataset.x);
+    step13.setAttribute('data-z',step12.dataset.z);
+    step13.setAttribute('data-rotate-y',step12.dataset.rotateY);
+
+    step12.setAttribute('data-x',step11.dataset.x);
+    step12.setAttribute('data-z',step11.dataset.z);
+    step12.setAttribute('data-rotate-y',step11.dataset.rotateY);
+
+    step11.setAttribute('data-x',x16);
+    step11.setAttribute('data-z',z16);
+    step11.setAttribute('data-rotate-y',rotateY16);
+    impress().goto('#overview')
+    // setTimeout(()=>
+    // interval = requestAnimationFrame(animeFunc)
+    // ,200)
+  };
+  
+  const rootElement = document.getElementById( "impress" );
+  rootElement.addEventListener( "impress:stepleave", function(event) {
+    const currentStep = event.target;
+    const nextStep = event.detail.next;
+    if(nextStep.id === 'overview'){
+      interval = setInterval(animeFunc, 100);
+    }else if(currentStep.id === 'overview'){
+      clearInterval(interval);
+    }
+  });
+
+</script>
+
+</body>
+</html>
